@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <title>Frontend Mentor | Four card feature section</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
@@ -18,14 +19,25 @@
         </header>
 
         <main>
-            <card v-for="card in cards" :key="card.id" :card="card"></card>
+            <card-component v-for="card in cards" :key="card.id" :class="card.cardClass">
+            </card-component>
         </main>
 
     </div>
 
+    <script type="text/x-template" id="card-template">
+        <article class="card">
+            <div class="card-header">
+                <h4>{{card.title}}</h4>
+                <p>{{card.description}}</p>
+            </div>
+            <div class="card-content">
+                <img :src="card.icon" alt="card icon">
+            </div>
+        </article>
+    </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="app.js"></script>
+    <script src="app.vue"></script>
 </body>
 
 </html>
