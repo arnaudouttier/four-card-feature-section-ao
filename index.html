@@ -4,40 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
     <title>Frontend Mentor | Four card feature section</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
 </head>
 
 <body>
 
-    <div id="app" class="page">
+    <div id="app">
 
         <header>
-            <site-title></site-title>
-            <site-description> </site-description>
+            <site-header></site-header>
         </header>
+        <!-- header -->
 
         <main>
-            <card-component v-for="card in cards" :key="card.id" :class="card.cardClass">
-            </card-component>
+            <card-component></card-component>
         </main>
+        <!-- main -->
 
     </div>
+    <!-- app -->
 
-    <script type="text/x-template" id="card-template">
-        <article class="card">
-            <div class="card-header">
-                <h4>{{card.title}}</h4>
-                <p>{{card.description}}</p>
-            </div>
-            <div class="card-content">
-                <img :src="card.icon" alt="card icon">
-            </div>
-        </article>
-    </script>
-
-    <script src="app.vue"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
