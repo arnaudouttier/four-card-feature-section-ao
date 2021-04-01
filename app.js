@@ -26,7 +26,7 @@ Vue.component('card-component', {
                     <p>{{card.description}}</p>
                 </div>
                 <div class="card-content">
-                    <img  v-bind:src="card.icon" alt="card icon">
+                    <img :src="imageSrc(card.icon)" alt="card icon">
                 </div>
             </article>
     </div>
@@ -34,11 +34,16 @@ Vue.component('card-component', {
     data() {
         return {
             cards: [
-                { id: 1, title: 'Supervisor', description: ' Monitors activity to identify project roadblocks', icon: './images/icon-supervisor.svg', cardClass: 'card-cyan' },
-                { id: 2, title: 'Team Builder', description: 'Scans our talent network to create the optimal team for your project', icon: './images/icon-team-builder.svg', cardClass: 'card-red' },
-                { id: 3, title: 'Karma', description: ' Regularly evaluates our talent to ensure quality', icon: './images/icon-karma.svg', cardClass: 'card-orange' },
-                { id: 4, title: 'Calculator', description: ' Uses data from past projects to provide better delivery estimates', icon: './images/icon-calculator.svg', cardClass: 'card-blue' }
+                { id: 1, title: 'Supervisor', description: ' Monitors activity to identify project roadblocks', icon: 'supervisor.svg', cardClass: 'card-cyan' },
+                { id: 2, title: 'Team Builder', description: 'Scans our talent network to create the optimal team for your project', icon: 'team-builder.svg', cardClass: 'card-red' },
+                { id: 3, title: 'Karma', description: ' Regularly evaluates our talent to ensure quality', icon: 'karma.svg', cardClass: 'card-orange' },
+                { id: 4, title: 'Calculator', description: ' Uses data from past projects to provide better delivery estimates', icon: 'calculator.svg', cardClass: 'card-blue' }
             ]
+        }
+    },
+    methods: {
+        imageSrc: function(slug) {
+            return 'images/' + slug
         }
     }
 })
