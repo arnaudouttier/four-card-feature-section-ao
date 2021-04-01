@@ -6,8 +6,9 @@
     --very-dark-blue: hsl(234, 12%, 34%);
     --grayish-blue: hsl(229, 6%, 66%);
     --very-light-gray: hsl(0, 0%, 98%);
-    --main-font-size: 15px;
     --main-font-family: Poppins;
+    --main-font-size: 15px;
+    font-size: var(--main-font-size);
 }
 
 h2,
@@ -16,16 +17,15 @@ h4 {
 }
 
 h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 h4 {
-    font-size: 21px;
+    font-size: 1.3rem;
 }
 
 body {
     font-family: var(--main-font-family);
-    font-size: var(--main-font-size);
     background-color: var(--very-light-gray);
     color: var(--grayish-blue);
 }
@@ -39,29 +39,35 @@ header {
     text-align: center;
 }
 
+.site-header {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
 .site-header h2:first-child {
     font-weight: 200;
 }
 
 main {
-    margin: 0 20px;
+    margin: 0 1.4rem;
 }
 
 
 /* Cards */
 
 .card {
-    padding: 27px;
+    padding: 2rem;
     margin-bottom: 30px;
     box-shadow: 0px 14px 20px -5px rgba(218, 228, 240, 1);
     border-radius: 5px;
 }
 
 .card-header {
-    margin-bottom: 30px;
+    margin-bottom: 2rem;
 }
 
 .card-header p {
+    font-size: 0.9rem;
     margin: 8px 0;
 }
 
@@ -93,6 +99,9 @@ main {
     main {
         max-width: 1120px;
         margin: 0 auto;
+    }
+    .site-header h2 {
+        font-size: 2.5rem;
     }
     .site-content {
         display: grid;
