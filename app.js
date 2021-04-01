@@ -33,9 +33,8 @@ Vue.component('card-component', {
     `,
     data() {
         return {
-            icon: './images/icon-supervisor.svg',
             cards: [
-                { id: 1, title: 'Supervisor', description: ' Monitors activity to identify project roadblocks', icon: require('/images/icon-supervisor.svg'), cardClass: 'card-cyan' },
+                { id: 1, title: 'Supervisor', description: ' Monitors activity to identify project roadblocks', icon: './images/icon-supervisor.svg', cardClass: 'card-cyan' },
                 { id: 2, title: 'Team Builder', description: 'Scans our talent network to create the optimal team for your project', icon: './images/icon-team-builder.svg', cardClass: 'card-red' },
                 { id: 3, title: 'Karma', description: ' Regularly evaluates our talent to ensure quality', icon: './images/icon-karma.svg', cardClass: 'card-orange' },
                 { id: 4, title: 'Calculator', description: ' Uses data from past projects to provide better delivery estimates', icon: './images/icon-calculator.svg', cardClass: 'card-blue' }
