@@ -33,7 +33,7 @@ Vue.component('card-component', {
     `,
     data() {
         return {
-            imgSupervisor = require('@/images/icon-supervisor.svg'),
+            imgSupervisor: require('@/images/icon-supervisor.svg'),
             cards: [
                 { id: 1, title: 'Supervisor', description: ' Monitors activity to identify project roadblocks', icon: imgSupervisor, cardClass: 'card-cyan' },
                 { id: 2, title: 'Team Builder', description: 'Scans our talent network to create the optimal team for your project', icon: 'images/icon-team-builder.svg', cardClass: 'card-red' },
