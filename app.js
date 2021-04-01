@@ -26,7 +26,7 @@ Vue.component('card-component', {
                     <p>{{card.description}}</p>
                 </div>
                 <div class="card-content">
-                    <img  :src="card.icon" alt="card icon">
+                    <img  v-bind:src="card.icon" alt="card icon">
                 </div>
             </article>
     </div>
