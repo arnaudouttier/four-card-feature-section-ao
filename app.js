@@ -43,7 +43,7 @@ Vue.component('card-component', {
     },
     methods: {
         imageSrc: function(slug) {
-            return './images/icon-' + slug
+            return './src/assets/images/icon-' + slug
         }
     }
 })
